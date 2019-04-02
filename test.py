@@ -23,8 +23,10 @@ for idx,val in enumerate(aux):
                 xcoordenates.append(val)
         else:
                 ycoordenates.append(val)
+#obtiene la longitud de las coordenadas 
 coordenatelen = len(ycoordenates)
 print(coordenatelen)
+#lista para guardar las coordenadas dentro de un rango positivo
 coorinx =[]
 cooriny=[]
 for i in range(0,coordenatelen):
@@ -32,6 +34,7 @@ for i in range(0,coordenatelen):
                 coorinx.append(xcoordenates[i])
                 cooriny.append(ycoordenates[i])
 print(coorinx,cooriny)
+#selecciona las coordenadas de la lista de manera aleatoria aleatorias 
 for i in (0,2):
         rand =randint(0,2)
         print(rand)
