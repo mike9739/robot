@@ -1,6 +1,4 @@
 import numpy as np 
-import matplotlib.pyplot as plt
-import math
 from random import randint
 
 def points_in_circle_np(radius, x0=0, y0=0, ):
@@ -12,5 +10,30 @@ def points_in_circle_np(radius, x0=0, y0=0, ):
         yield x, y
 
 a = list(points_in_circle_np(2,0,0))
-print(len(a))
-print(randint(0,10))
+##separar las coordenadas en x y y
+aux=[]
+for i in a:
+        for j in i :
+                aux.append(j)
+
+xcoordenates=[]
+ycoordenates=[]
+for idx,val in enumerate(aux):
+        if idx%2 == 0:
+                xcoordenates.append(val)
+        else:
+                ycoordenates.append(val)
+coordenatelen = len(ycoordenates)
+print(coordenatelen)
+coorinx =[]
+cooriny=[]
+for i in range(0,coordenatelen):
+        if (xcoordenates[i]>=0) and (ycoordenates[i]>=0):
+                coorinx.append(xcoordenates[i])
+                cooriny.append(ycoordenates[i])
+print(coorinx,cooriny)
+for i in (0,2):
+        rand =randint(0,2)
+        print(rand)
+        print(coorinx[rand],cooriny[rand])
+        

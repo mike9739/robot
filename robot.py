@@ -1,8 +1,9 @@
 import numpy as np
 import math
 from random import randint
+import main
 
-distance = getDistance()
+
 
 ##crea el mundom, una matriz de las dimensiones width y height
 def createWorld(width,height):
@@ -23,8 +24,34 @@ def moveRobot():
     
 ##funcion de para ealuar posisicon , busca las coordenadas del circuo , calcula la distancia y selecciona la mejor opcion
 def evaluatePosition(radius,x,y,distance):
-    candidates = points_in_circle_np(radius,x,y)
-    candidateslen = len(candidates)
+    candidates = points_in_circle_np(1,x,y)
+    candidates= list(candidates)
+    a = list(points_in_circle_np(2,0,0))
+        ##separar las coordenadas en x y y
+    aux=[]
+    for i in candidates:
+        for j in i :
+                aux.append(j)
+    print(aux)
+    xcoordenates=[]
+    ycoordenates=[]
+    for idx,val in enumerate(aux):
+        if idx%2 == 0:
+                xcoordenates.append(val)
+        else:
+                ycoordenates.append(val)
+        #obtiene la distancia de la clase main
+    distance = main.distance
+    coordenatelen = len(xcoordenates)
+    for i in range(0,2):
+            rand = randint(0,coordenatelen)
+            
+            
+
+    
+
+
+
     
 
 

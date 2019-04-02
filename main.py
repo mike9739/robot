@@ -1,4 +1,4 @@
-import robot as robot
+import robot 
 ##pregunta por la dimension del escenario
 mapwidth=input('introduzca el ancho del mapa:')
 mapwidth= int(mapwidth)
@@ -25,5 +25,6 @@ print('El objetivo se encuentra aqui:')
 print(mapa)
 
 distance = robot.getDistance(xinicial,yinicial,xfinal,yfinal)
-print(distance)
+
+print( 'El robot se encuentra a:',distance)
 
